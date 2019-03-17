@@ -41,4 +41,9 @@ class NewsTest extends TestCase
 		echo 'test5';
 	}
 
+	public function gittest6P()
+	{
+		echo 'test6';
+	}
+
 }
