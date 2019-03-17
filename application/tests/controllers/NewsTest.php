@@ -13,4 +13,23 @@ class NewsTest extends TestCase
 		$output = $this->request('GET', 'news');
 		$this->assertContains('<title>news</title>', $output);
 	}
+
+
+	public function gittest1()
+	{
+		echo 'test1';
+	}
+
+
+	public function gittest2()
+	{
+		echo 'test2';
+	}
+
+	public function gittest3()
+	{
+		echo 'test3';
+	}
+
+
 }
