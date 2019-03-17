@@ -34,11 +34,8 @@ class News extends CI_Controller
 
 		$this->pagination->initialize($config);
 
-
 		$data['news'] = $this->News_model->get_news(FALSE,$limitListCount,$listStartNum);
-//		$data['news'] = $this->News_model->get_news();
-
-		$data['title'] = 'News archive';
+		$data['title'] = 'News';
 		$data['pagination'] = $this->pagination->create_links();
 
 
@@ -50,13 +47,14 @@ class News extends CI_Controller
 
 	public function view($slug = NULL)
 	{
+
 		$data['news_item'] = $this->News_model->get_news($slug);
 
 		if (empty($data['news_item'])) {
 			show_404();
 		}
 
-		$data['title'] = $data['news_item']['title'];
+		$data['title'] = "News view : ".$data['news_item']['title'];
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('news/view', $data);

@@ -17,11 +17,12 @@ class Fixture extends CI_Controller
 	}
 
 
-	public function index()
+
+	public function index(int $count = 40)
 	{
 //		$this->output->enable_profiler(TRUE);
 
-		echo $this->newsfixture->add_newsFixtureData(40);
+		echo $this->newsfixture->add_newsFixtureData($count);
 
 		$this->load->view('test/fixtureIndex');
 	}

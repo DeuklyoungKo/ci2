@@ -13,7 +13,7 @@ class newsfixture {
 		$this->CI->load->library('session');
 	}
 
-	public function add_newsFixtureData(Int $count = 20)
+	public function add_newsFixtureData($count = 20)
 	{
 
 		$this->CI->db->truncate('news');
